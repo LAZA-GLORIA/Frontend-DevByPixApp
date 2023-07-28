@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: pink;
+    height: 10vh;
+    align-items: center;
+}
+
+img {
+    width: 13rem;
+}
+
+.header-container {   
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.banner-menu {
+    background-color: yellow;
+}
+
+.mat-mdc-menu-content {
+    background-color: pink;
+}

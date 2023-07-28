@@ -1,0 +1,34 @@
+.home-container {
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     */
+    width: 30%;
+    margin: auto;
+    margin-left: 2rem;
+    position: absolute;
+    top: 20rem;
+}
+
+.home-container-img {
+    width: 100%;
+    margin: 5rem 0 5rem 0;
+    height: 65%;
+    background-image: url("../../../../assets/home-banner.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+}
+
+.home-title {
+    margin-top: 1rem;
+    font: menu;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+}

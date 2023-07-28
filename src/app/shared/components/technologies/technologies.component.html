@@ -1,0 +1,79 @@
+<!-- <div class="container-chip">
+  <h2>Il existe plusieurs langages de programmation</h2>
+</div> -->
+<div class="container-card">
+  <mat-card *ngFor="let tech of tabTech; let i = index">
+    <mat-card-header>
+      <h4>{{ tech.titreTechnologie }}</h4>
+      <div>
+        <p>
+          {{ tech.nomTechnologie }} a été crée le :
+          {{ tech.horodatageCreation | date : "dd/MM/yyy" }}
+        </p>
+        <p>par :</p>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
+        porro eos itaque pariatur, Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Accusamus repudiandae aperiam at dolores praesentium
+        officiis hic! Illum et aspernatur ipsam est vel aperiam quos dolorum
+        nesciunt mollitia modi, asperiores nihil.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-chip-option>{{ tech.nomTechnologie }}</mat-chip-option>
+
+      <mat-chip-option color="warn">{{ tech.typeTechnologie }}</mat-chip-option>
+
+      <mat-chip-option color="accent">{{
+        tech.categorieTechnologie
+      }}</mat-chip-option>
+
+      <!-- <button type="submit" (click)="addNewTechnologie()">MON BOUTON</button> -->
+      <button (click)="deleteOneTechnologie(tech)">SUPPRIMER</button>
+      <button>MODIFIER</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="container-card">
+  <!-- Formulaire d'ajout de technologie -->
+  <form [formGroup]="technologieForm" (ngSubmit)="onSubmit()">
+    <mat-card>
+      <mat-card-header>
+        <h4>Ajouter une nouvelle technologie</h4>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="Titre de la technologie" formControlName="titreTechnologie" required>
+          <mat-error *ngIf="technologieForm.get('titreTechnologie')?.invalid">
+            Le titre de la technologie est requis.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Nom de la technologie" formControlName="nomTechnologie" required>
+          <mat-error *ngIf="technologieForm.get('nomTechnologie')?.invalid">
+            Le nom de la technologie est requis.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Description de la technologie" formControlName="description" required></textarea>
+          <mat-error *ngIf="technologieForm.get('description')?.invalid">
+            La description de la technologie est requise.
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button type="submit" [disabled]="technologieForm.invalid">Ajouter</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
+
+<hr />
+
+<p>Les technologies DevOps</p>

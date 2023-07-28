@@ -1,0 +1,50 @@
+.container-chip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vh;
+    align-items: center;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(auto, auto);
+    min-width: fit-content;
+    width: 80%;
+    margin: auto;
+}
+
+mat-card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+mat-chip-option {
+    margin: 0.2rem;
+}
+
+mat-card {
+    margin: 2rem 2rem 0 2rem;
+    width: 30rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 20rem;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: coral;
+}

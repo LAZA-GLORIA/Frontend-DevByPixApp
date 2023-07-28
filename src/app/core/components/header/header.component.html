@@ -1,0 +1,99 @@
+<header>
+<div class="header-logo">
+    <button mat-button>
+      <img src="../../../../assets/DevByPix.svg" alt="Logo" class="logo">
+    </button> 
+</div>
+<div class="header-container">
+    <button mat-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        <span>Accueil</span>
+    </button> 
+    
+    <button mat-button [matMenuTriggerFor]="animals">Programmation</button>
+    <div class="banner-menu">
+      <mat-menu #animals="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Programmation Orientée Objet</button>
+        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Programmation procedurale</button>
+      </mat-menu>
+    </div>
+    
+    
+    <button mat-button [matMenuTriggerFor]="animals2">DevOps</button>
+    <mat-menu #animals2="matMenu">
+      <button mat-menu-item>Docker</button>
+      <button mat-menu-item>Kubernates</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="animals3">Mobile</button>
+    <mat-menu #animals3="matMenu">
+      <button mat-menu-item>Ionic</button>
+      <button mat-menu-item>React Native</button>
+      <button mat-menu-item>Flutter</button>
+    </mat-menu> 
+    
+    <button mat-button [matMenuTriggerFor]="animals4">Outils</button>
+    <mat-menu #animals4="matMenu">
+      <button mat-menu-item>Intellij</button>
+      <button mat-menu-item>VSCode</button>
+      <button mat-menu-item>Git/Github</button>
+    </mat-menu>   
+
+    <button mat-button [matMenuTriggerFor]="animals5">Réalisations</button>
+    <mat-menu #animals5="matMenu">
+      <button mat-menu-item>Tableau dynamique</button>
+    </mat-menu>   
+
+    <button mat-button [matMenuTriggerFor]="animals5">Blog</button>
+    <mat-menu #animals5="matMenu">
+      <button mat-menu-item>Tableau dynamique</button>
+    </mat-menu>  
+</div>
+
+<div class="header-search">
+    <button mat-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="language"></mat-icon>
+        <span class="material-icons">keyboard_arrow_down</span>
+    </button> 
+</div>
+<mat-menu #vertebrates="matMenu" class="mat-menu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Java</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Javascript</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Python</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Javascript</button>
+  <button mat-menu-item>Angular2+</button>
+  <button mat-menu-item>Reactjs</button>
+  <button mat-menu-item>Vuejs</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>
+</header>

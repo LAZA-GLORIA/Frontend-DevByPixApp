@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    box-sizing: border-box;
+    padding: 0;
+    width: 70%;
+    margin: auto; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@fontsource/material-icons/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
